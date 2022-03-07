@@ -597,28 +597,6 @@ color: var(--text-color-light);
 }
 
 /*==================== PROJECT IN MIND ====================*/
-.project{
-    text-align: center;
-}
-
-.project_bg {
-    background-color: var(--bg-project);
-    padding-top: 3rem;
-}
-
-.project_title {
-    font-size: var(--h2-font-size);
-    margin-bottom: var(--mb-0-75);
-}
-
-.project_description {
-    margin-bottom: var(--mb-1-5);
-}
-
-.project_title,
-.project_description {
-    color: #fff;
-}
 
 /*==================== CONTACT ME ====================*/
 .contact_container {
