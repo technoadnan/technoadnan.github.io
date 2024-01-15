@@ -523,20 +523,27 @@ color: var(--text-color-light);
     background-color:#b3b6db;
 }
 
-.skill_html {
+.skill_py {
     width: 90%;
 }
 
-.skill_js {
+.skill_wordpress {
+    width: 85%;
+}
+.skill_html {
     width: 75%;
 }
-.skill_reactjs {
+.skill_c {
     width: 60%;
 }
-
-.skill_c {
-    width: 45%;
+.skill_react {
+    width: 54%;
 }
+
+
+/* .skill_c {
+    width: 7%;
+} */
 
 /*==================== PORTFOLIO ====================*/
 .portfolio_container {
@@ -556,6 +563,9 @@ color: var(--text-color-light);
 .portfolio_title {
     font-size: var(--h3-font-size);
     margin-bottom: var(--mb-0-75);
+}
+.portfolio_description {
+    padding-bottom: 10px;
 }
 
 .swiper-slide img {
