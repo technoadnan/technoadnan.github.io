@@ -33,15 +33,6 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
-/*==================== ACCORDION SKILLS ====================*/
-
-
-/*==================== QUALIFICATION TABS ====================*/
-
-
-/*==================== SERVICES MODAL ====================*/
-
-
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper('.portfolio_container', {
       spaceBetween: 30,
