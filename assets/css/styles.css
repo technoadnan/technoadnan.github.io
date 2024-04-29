@@ -106,29 +106,6 @@
 }
 
 
-body.dark-theme {
-
-        /* Change favorite color */
-        --hue-color: 236; 
-        /* 91 , 285 , 172 , 270 , // 258 \\, // 274 \\, 309 , 135  ,42 , 353 , 90 , 236*/
-        /* HSL color mode */
-        --first-color: hsl(var(--hue-color), 69%, 61%);
-        --first-color-second: hsl(var(--hue-color), 69%, 61%);
-        --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-        --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-        --title-color: hsl(var(--hue-color), 8%, 15%);
-        --text-color: hsl(var(--hue-color), 8%, 45%);
-        --text-color-light: hsl(var(--hue-color), 8%, 65%);
-        --input-color: hsl(var(--hue-color), 70%, 96%);
-        --body-color: hsl(var(--hue-color), 60%, 99%);
-        --container-color: #fff;
-        --bg-project: #6f5ed5;
-        --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-        --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-        --scroll-header: 0 10px 19px hsl(180deg 0% 100% / 20%);
-        --color-primary: hsl(352deg 75% 60%);
-}
-
 
 /*========== Button Dark/Light ==========*/
 .nav_btns {
@@ -163,10 +140,15 @@ body {
     font-size: var(--normal--font-size);
     /* background-color: var(--body-color); */
     color: var(--text-color);
-    background-image: url(../img/blue.jpg);
+    background-image: url("../img/blue.jpg");
     background-size: cover;
     background-attachment: fixed;
     position: relative; /* Needed for absolute positioning of overlay */
+    background-repeat: no-repeat;
+    /* transform: translate(150%,50%); */
+    background-position: bottom 10% right 33%;
+
+    
 }
 body::before {
     content: "";
@@ -175,7 +157,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(8, 12, 17, 0.85); /* White overlay with 50% opacity */
+    background-color: rgba(8, 12, 17, 0.70); /* White overlay with 50% opacity */
     z-index: -1; /* Ensure the overlay is behind other content */
   }
 
@@ -443,11 +425,12 @@ img {
 }
 /*==================== ABOUT ====================*/
 .about_img {
-    width: 200px;
+    width: 250px;
     border-radius: .5rem;
     justify-self: center;
     align-self: center;
     object-fit: cover;
+    opacity: .8;
 }
 
 .about_description {
@@ -680,7 +663,7 @@ color: var(--text-color-light);
 
 
 .footer_bg {
-    background-color: var(--first-color-second);
+    background-color: #0e0f1b;
     padding: 2rem 0 2rem;
 }
 
@@ -1178,10 +1161,10 @@ color: var(--text-color-light);
     animation: morph 3s linear infinite;
     animation-delay: 400ms;
     opacity: .89;
-    content: "TECHNO_ADNAN;";
-    font-family: "monospace";
+    content: "techno_adnan;";
+    /* font-family: "monospace"; */
     letter-spacing: 1px;
-    font-weight: 400;
+    font-weight: 500;
     /* content: "techno adnan"; */
     /* line-height: 120px; */
     /* text-indent: 40px; */
@@ -1232,7 +1215,7 @@ color: var(--text-color-light);
       padding-top: 0.5rem;
   }
   .section {
-      padding: 0.5rem 0 4rem;
+      padding: 0.5rem 0 0 0;
   }
   .home_content {padding-top: 0.5rem;}
   }
@@ -1254,175 +1237,84 @@ color: var(--text-color-light);
 
 
 
-    /*========== Services ==========*/
-    .services .service-item
-    {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-      display: flex;
-      justify-content: center;
-      
-    }
-    .services .service-item .service-item-inner
-    {
-      border-radius: var(--border-radius);
-      padding: var(--card-padding);
-      text-align: center;
-      transform: translateY(0);
-      transition: 0.3s;
-    }
-    .services .service-item .service-item-inner:hover
-    {
-      transform: translateY(-0.625rem);
-    }
-    .services .service-item img
-    {
-      margin-bottom: var(--m-0-75);
-    }
-    .service-item h3
-    {
-      margin-bottom: var(--m-0-5);
-      color: #fff;
-      line-height: 1.8;
-    }
-    .service-item p
-    {
-      color: #fff;
-      line-height: 1.7;
+/*========== Services ==========*/
+.services .service-item
+{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    display: flex;
+    justify-content: center;
+    
+}
+.services .service-item .service-item-inner
+{
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    transform: translateY(0);
+    transition: 0.3s;
+}
+.services .service-item .service-item-inner:hover
+{
+    transform: translateY(-0.625rem);
+}
+.services .service-item img
+{
+    margin-bottom: var(--m-0-75);
+}
+.service-item h3
+{
+    margin-bottom: var(--m-0-5);
+    color: #fff;
+    line-height: 1.8;
+}
+.service-item p
+{
+    color: #fff;
+    line-height: 1.7;
 
-    }
-    .text
-    {
-       text-align: center;
-       margin-top: var(--m-1-5);
-    }
-    .text a 
-    {
-      color: var(--color-primary);
-    }
+}
+.text
+{
+    text-align: center;
+    margin-top: var(--m-1-5);
+}
+.text a 
+{
+    color: var(--color-primary);
+}
 
-    .container-services {
-        max-width: 968px;
-        margin: auto;
-    }
-    .section .container-services
-    {
-      padding-top: 3.90rem;
-      padding-bottom: 4.75rem;
-
-    }
-    .section-title
-    {
-      font-size: var(--h1-font-size);
-      margin-left: var(--m-0-75);
-      /* margin-bottom: var(--m-2-5); */
-      text-align: center;
-    }
-    .padd-15
-    {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    .row 
-    {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-.pricing-container {
+.container-services {
     max-width: 968px;
-  margin: auto;
+    margin: auto;
+}
+.section .container-services
+{
+    padding-top: 3.90rem;
+    padding-bottom: 4.75rem;
+
+}
+.section-title
+{
+    font-size: var(--h1-font-size);
+    margin-left: var(--m-0-75);
+    /* margin-bottom: var(--m-2-5); */
+    text-align: center;
+}
+.padd-15
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row 
+{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
 
-
-
-.prices
-    {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
-    .prices:nth-child(odd)
-    {
-      margin-top: 1.5rem;
-    }
-    .prices:nth-child(1)
-    {
-      padding-left: 15px;
-    }
-    .prices:nth-child(3)
-    {
-      padding-right: 15px;
-    }
-    .price-item
-    {
-      padding: var(--card-padding);
-      background-color: #2a2442;
-      text-align: center;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-    }
-    .price-item h3.plan
-    {
-      margin: var(--m-0-75) 0;
-    }
-    .prices p 
-    {
-      margin-bottom: 1rem;
-      padding: 5px;
-    }
-    .price-item .price 
-    {
-      font-size: var(--h1-font-size);
-      font-weight: var(--font-semi-bold);
-    }
-    .price-item .price em
-    {
-      font-style: normal;
-      font-size: var(--small-font-size);
-      margin-right: var(--m-0-5);
-      vertical-align: super;
-    }
-    .price-item .price span
-    {
-      font-size: var(--normal-font-size);
-      margin-left: var(--m-0-75);
-    }
-    .price-item .btn
-    {
-      margin-top: var(--m-1);
-    }
-    .price-item.best
-    {
-      padding: 3.25rem 2.5rem;
-      z-index: 1;
-      position: relative;
-    }
-    .price-item .badge
-    {
-      position: absolute;
-      left: 0;
-      top: 3.1rem;
-      color: #fff;
-      background-color: #e64c61;
-      transform: rotate(-90deg);
-      padding: 0.4rem 0.75rem;
-      font-size: var(--small-font-size);
-      border-top-left-radius: var(--border-radius);
-      border-bottom-left-radius: var(--border-radius);
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-
-    
-    .contact-box
-    {
-      /* flex: 0 0 40%;
-      max-width: 40%; */
-    }
     .contact-form
     {
       flex: 0 0 60%;
@@ -1558,3 +1450,18 @@ color: var(--text-color-light);
     margin: auto;
 }
 }
+
+
+.mdi--github {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
